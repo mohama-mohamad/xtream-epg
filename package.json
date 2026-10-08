@@ -1,0 +1,7 @@
+{
+  "name": "xtream-epg",
+  "private": true,
+  "type": "module",
+  "description": "TV guide built from free XMLTV sources for the Xtream Pro apps",
+  "scripts": { "build": "node scripts/build.mjs" }
+}

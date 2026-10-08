@@ -1,0 +1,88 @@
+{
+  "comment": "Manual corrections of the automatic catalogue. Keys are matching keys (see scripts/key.mjs). merge: source keys that are the same channel. aliases: extra names (Arabic names of the IPTV lists...). disabled: no guide published for these channels. prefer: source id to use for a channel.",
+  "merge": {
+    "aljazeeraarabic": "aljazeera",
+    "aljazeeramobasher": "aljazeeramubasher",
+    "cnbcarabiya": "cnbcarabia",
+    "trtarabiya": "trtarabi",
+    "aljazeeramobasher2": "aljazeeramubasher2"
+  },
+  "aliases": {
+    "aljazeera": [
+      "الجزيرة",
+      "Al Jazeera Arabic",
+      "Aljazeera News"
+    ],
+    "aljazeeramubasher": [
+      "الجزيرة مباشر",
+      "Al Jazeera Mubasher"
+    ],
+    "aljazeeradocumentary": [
+      "الجزيرة الوثائقية",
+      "Al Jazeera Documentary"
+    ],
+    "alarabiya": [
+      "العربية",
+      "Al Arabiya News"
+    ],
+    "alhadath": [
+      "الحدث",
+      "Al Hadath"
+    ],
+    "skynewsarabia": [
+      "سكاي نيوز عربية",
+      "Sky News Arabia"
+    ],
+    "mbc1": [
+      "ام بي سي 1",
+      "MBC One"
+    ],
+    "mbc2": [
+      "ام بي سي 2",
+      "MBC Two"
+    ],
+    "mbc3": [
+      "ام بي سي 3"
+    ],
+    "mbc4": [
+      "ام بي سي 4",
+      "MBC Four"
+    ],
+    "mbcdrama": [
+      "ام بي سي دراما"
+    ],
+    "mbcaction": [
+      "ام بي سي اكشن"
+    ],
+    "mbcmasr": [
+      "ام بي سي مصر",
+      "MBC Egypt"
+    ],
+    "mbcmasr2": [
+      "ام بي سي مصر 2",
+      "MBC Egypt 2"
+    ],
+    "mbciraq": [
+      "ام بي سي العراق"
+    ],
+    "abudhabi": [
+      "ابوظبي",
+      "Abu Dhabi TV"
+    ],
+    "dubai": [
+      "دبي",
+      "Dubai TV"
+    ],
+    "rotanacinemaksa": [
+      "روتانا سينما"
+    ],
+    "rotanakhalijia": [
+      "روتانا خليجية"
+    ],
+    "beinsportsnews": [
+      "بي ان سبورت الاخبارية"
+    ]
+  },
+  "disabled": [],
+  "prefer": {}
+}

@@ -1,0 +1,10 @@
+{
+  "comment": "Free XMLTV sources. offset: force a UTC offset when the file labels its times wrongly. trust: preferred when sources disagree (higher = more trusted).",
+  "sources": [
+    { "id": "epgshare-ae", "name": "EPG Share UAE", "url": "https://epgshare01.online/epgshare01/epg_ripper_AE1.xml.gz", "trust": 2 },
+    { "id": "epgshare-bein", "name": "EPG Share beIN", "url": "https://epgshare01.online/epgshare01/epg_ripper_BEIN1.xml.gz", "trust": 2,
+      "offset": "+03:00", "offsetNote": "writes Gulf time but labels it +01:00 (checked against IPTV servers' own beIN guide, 2026-10-08)" },
+    { "id": "epgshare-sa", "name": "EPG Share Saudi", "url": "https://epgshare01.online/epgshare01/epg_ripper_SA2.xml.gz", "trust": 1 },
+    { "id": "epgshare-aljazeera", "name": "EPG Share Al Jazeera", "url": "https://epgshare01.online/epgshare01/epg_ripper_ALJAZEERA1.xml.gz", "trust": 3 }
+  ]
+}

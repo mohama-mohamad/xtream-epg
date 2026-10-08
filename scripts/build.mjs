@@ -43,6 +43,8 @@ const entities = { amp: "&", lt: "<", gt: ">", quot: '"', apos: "'" };
 const decode = s => s.replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1")
   .replace(/&(#x[0-9a-f]+|#\d+|[a-z]+);/gi, (m, e) => e[0] === "#" ? String.fromCodePoint(e[1] === "x" || e[1] === "X" ? parseInt(e.slice(2), 16) : parseInt(e.slice(1), 10)) : entities[e] ?? m)
   .trim();
+// filler entries some sources publish when they have no guide: not real programmes
+const placeholder = /^(tv guide is not available|no (programme |program )?information|no epg|to be announced|tba|لا يوجد دليل|لا توجد معلومات)/i;
 const attr = (s, name) => (s.match(new RegExp(`\\b${name}="([^"]*)"`)) || [])[1] ?? "";
 
 /** "20261008133000 +0100" → epoch ms; a forced offset ("+03:00") replaces the file's own. */
@@ -70,7 +72,7 @@ function parse(xml, src) {
     if (!s || e < FROM || s > TO) continue;
     const title = decode((m[2].match(/<title[^>]*>([\s\S]*?)<\/title>/) || [])[1] || "");
     const desc = decode((m[2].match(/<desc[^>]*>([\s\S]*?)<\/desc>/) || [])[1] || "");
-    if (title) ch.progs.push({ s, e, t: title, d: desc.length > DESC_MAX ? desc.slice(0, DESC_MAX - 1) + "…" : desc });
+    if (title && !placeholder.test(title)) ch.progs.push({ s, e, t: title, d: desc.length > DESC_MAX ? desc.slice(0, DESC_MAX - 1) + "…" : desc });
   }
   for (const ch of channels.values()) ch.progs.sort((a, b) => a.s - b.s);
   return channels;
